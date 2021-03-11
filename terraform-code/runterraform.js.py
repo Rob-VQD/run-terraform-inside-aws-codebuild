@@ -12,7 +12,7 @@ if len(sys.argv) != 4:
 myregion = sys.argv[1]
 prefix = sys.argv[2]
 destroy = sys.argv[3]
-IP_address = sys.argv[4]
+IP_addr = sys.argv[4]
 
 mycommands = ["terraform"]
 
@@ -21,7 +21,7 @@ if destroy == "True":
 else:
     mycommands.extend(["apply"])
 
-mycommands.extend([ "-var", "region="+myregion , "-var", "prefix="+prefix, "-var", "IP_address_port_1433="+IP_address])
+mycommands.extend([ "-var", "region="+myregion , "-var", "prefix="+prefix, "-var", "IP_address_port_1433="+IP_addr])
 
 print mycommands
 call(mycommands)
