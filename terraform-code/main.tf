@@ -131,7 +131,7 @@ resource "aws_security_group" "Bastion-SG" {
       from_port = 0
       to_port = 0
       protocol    = "-1"
-      cidr_blocks = var.IP_address_port_1433
+      cidr_blocks = [var.IP_address_port_1433]
   }
 
   egress {
