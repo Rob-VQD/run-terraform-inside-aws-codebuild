@@ -22,11 +22,13 @@ variable "IP_address_port_1433" {
 variable "Database_Password" {
     type = string
     description = "Give the Password to login to the database"
+    default = "MyPassword!"
 }
 
 variable "Database_Username" {
     type = string
     description  = "Give the Username to login to the database"
+    default = "MyUsername"
 }
 
 variable "Port_to_connect_to_db" {
